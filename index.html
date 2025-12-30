@@ -12,7 +12,7 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #333;
             background-color: #f5f5f5;
@@ -22,10 +22,10 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background-color: white;
+            background: white;
             padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         h1 {
@@ -34,35 +34,18 @@
             font-size: 2em;
         }
         
-        .app-name {
-            color: #666;
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
-        
-        .last-updated {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 30px;
-            padding: 10px;
-            background-color: #f8f9fa;
-            border-left: 4px solid #1a73e8;
-        }
-        
         h2 {
             color: #2c3e50;
-            margin-top: 40px;
+            margin-top: 30px;
             margin-bottom: 15px;
-            font-size: 1.5em;
-            border-bottom: 2px solid #e0e0e0;
             padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
         }
         
         h3 {
             color: #34495e;
-            margin-top: 25px;
+            margin-top: 20px;
             margin-bottom: 10px;
-            font-size: 1.2em;
         }
         
         p {
@@ -71,28 +54,49 @@
         }
         
         ul {
-            margin-bottom: 15px;
             margin-left: 20px;
+            margin-bottom: 15px;
         }
         
         li {
             margin-bottom: 8px;
         }
         
-        .highlight {
-            background-color: #fff3cd;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 4px solid #ffc107;
-            margin: 20px 0;
+        .app-name {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
         }
         
-        .contact-info {
+        .last-updated {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+        }
+        
+        .highlight {
             background-color: #e8f5e9;
             padding: 20px;
             border-radius: 5px;
-            margin-top: 30px;
+            margin: 20px 0;
             border-left: 4px solid #4caf50;
+        }
+        
+        .warning {
+            background-color: #fff3e0;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #ff9800;
+        }
+        
+        .contact-info {
+            background-color: #e3f2fd;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
         }
         
         a {
@@ -112,6 +116,14 @@
             color: #2c3e50;
         }
         
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
         @media (max-width: 600px) {
             .container {
                 padding: 20px;
@@ -124,6 +136,10 @@
             h2 {
                 font-size: 1.3em;
             }
+            
+            p {
+                text-align: left;
+            }
         }
     </style>
 </head>
@@ -132,7 +148,7 @@
         <h1>Privacy Policy</h1>
         <p class="app-name">NotePad by SymptomTech</p>
         <div class="last-updated">
-            <strong>Last Updated:</strong> December 16, 2025
+            <strong>Last Updated:</strong> December 29, 2025
         </div>
 
         <div class="section">
@@ -146,8 +162,9 @@
         </div>
 
         <div class="highlight">
-            <strong>Privacy-First Approach:</strong> NotePad is designed with your privacy in mind. All your notes, 
-            checklists, and voice recordings are stored locally on your device. We do not have access to your personal data.
+            <strong>Privacy-First Approach:</strong> NotePad is designed with your privacy as the top priority. All your notes, 
+            folders, and content are stored locally on your device. All AI features (speech-to-text and photo-to-text) 
+            process data on-device only. We do not have access to your personal data or notes.
         </div>
 
         <h2>1. Information We Collect</h2>
@@ -156,128 +173,181 @@
             <h3>1.1 Information Stored Locally on Your Device</h3>
             <p>The following data is stored <strong>only on your device</strong> and is never transmitted to our servers:</p>
             <ul>
-                <li><strong>Notes and Checklists:</strong> All text content you create, including titles, body text, and checklist items</li>
+                <li><strong>Notes and Content:</strong> All text content you create, including titles, body text, and checklist items</li>
                 <li><strong>Folders and Categories:</strong> Your organizational structure, folder names, and color preferences</li>
-                <li><strong>App Settings:</strong> Theme preferences, font selections, sort order, and other customization options</li>
-                <li><strong>Backup Files:</strong> When you create backups, they are stored on your device or your chosen cloud service (Google Drive, Dropbox, etc.)</li>
+                <li><strong>App Settings:</strong> Theme preferences (light/dark/system), font selections, sort order, and feature toggles</li>
+                <li><strong>Backup Files:</strong> When you create backups, they are stored on your device or your chosen storage location (Downloads folder, external storage, etc.)</li>
+                <li><strong>Speech Recognition Models:</strong> Downloaded language models for speech-to-text (stored in app's private directory)</li>
+                <li><strong>Pin Status:</strong> Which notes you have pinned</li>
+                <li><strong>Archive Status:</strong> Which notes and folders are archived</li>
             </ul>
+            <p><strong>Important:</strong> We do not have access to any of this data. It exists only on your device.</p>
 
-            <h3>1.2 Speech-to-Text Feature</h3>
-            <p><strong>Privacy Guarantee:</strong> When you use the speech-to-text feature:</p>
+            <h3>1.2 Information We DO NOT Collect</h3>
+            <p>We want to be crystal clear about what we do not collect:</p>
             <ul>
-                <li><strong>100% Offline Processing:</strong> All voice recognition is performed locally on your device using downloaded language models</li>
-                <li><strong>No Audio Recording Stored:</strong> Voice input is converted to text in real-time and the audio is immediately discarded</li>
-                <li><strong>No Cloud Processing:</strong> Your voice never leaves your device or gets uploaded to any server</li>
-                <li><strong>No Third-Party Access:</strong> No external services have access to your voice data</li>
-                <li><strong>Language Models:</strong> Downloaded language packs are stored locally on your device</li>
-            </ul>
-
-            <h3>1.3 Technical Information</h3>
-            <p>We may collect minimal technical information to improve the App:</p>
-            <ul>
-                <li><strong>Device Information:</strong> Device model, operating system version (for compatibility)</li>
-                <li><strong>App Usage Data:</strong> Basic analytics about app crashes and performance issues (anonymous, no personal data)</li>
-                <li><strong>Google Play Services:</strong> Information required for in-app purchases and ad display (handled by Google)</li>
+                <li><strong>Your notes and content:</strong> Never accessed, transmitted, or stored on external servers</li>
+                <li><strong>Voice recordings:</strong> Audio captured during speech-to-text is processed locally and immediately discarded after transcription</li>
+                <li><strong>Photos:</strong> Images captured or selected for photo-to-text are processed locally and immediately discarded after text extraction</li>
+                <li><strong>Transcriptions:</strong> All transcribed text from voice or images is stored only in your local notes</li>
+                <li><strong>Personal information:</strong> No names, email addresses, phone numbers, or contact information</li>
+                <li><strong>Account data:</strong> The App does not require registration or account creation</li>
+                <li><strong>Location data:</strong> We do not access or collect your location</li>
+                <li><strong>Usage analytics:</strong> We do not track how you use the App or collect usage statistics</li>
+                <li><strong>Crash reports:</strong> No automatic crash reporting or analytics are collected</li>
             </ul>
         </div>
 
-        <h2>2. How We Use Your Information</h2>
+        <h2>2. Third-Party Services</h2>
         
         <div class="section">
-            <p>We use the collected information for the following purposes:</p>
+            <h3>2.1 Google AdMob (Free Version Only)</h3>
+            <p>The free version of the App displays advertisements through Google AdMob. AdMob may collect and process certain information to deliver personalized advertisements. This information may include:</p>
             <ul>
-                <li><strong>App Functionality:</strong> To provide core features like note-taking, organization, and speech-to-text</li>
-                <li><strong>App Improvement:</strong> To identify and fix bugs, improve performance, and enhance user experience</li>
-                <li><strong>In-App Purchases:</strong> To process your purchases of premium features (Remove Ads, Speech-to-Text)</li>
-                <li><strong>Advertising:</strong> To display ads (only if you haven't purchased the Remove Ads feature)</li>
+                <li>Device identifiers (such as advertising ID)</li>
+                <li>IP address</li>
+                <li>Device type and operating system</li>
+                <li>App usage information (when ads are viewed)</li>
+                <li>General location information (derived from IP address)</li>
             </ul>
-            <p><strong>Important:</strong> We never sell, rent, or share your personal information with third parties.</p>
-        </div>
-
-        <h2>3. Permissions We Request</h2>
-        
-        <div class="section">
-            <p>NotePad requests the following permissions:</p>
             
-            <h3>3.1 Microphone Permission (RECORD_AUDIO)</h3>
+            <p>For more information about how Google AdMob collects and processes data:</p>
             <ul>
-                <li><strong>Purpose:</strong> Required for the speech-to-text feature</li>
-                <li><strong>When Requested:</strong> Only when you tap the microphone button after purchasing the speech-to-text feature</li>
-                <li><strong>Optional:</strong> You can use the app without granting this permission (speech-to-text will not be available)</li>
-                <li><strong>Privacy:</strong> Audio is processed locally in real-time and never stored or transmitted</li>
+                <li>Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+                <li>AdMob Partner Policies: <a href="https://support.google.com/admob/answer/9012903" target="_blank">https://support.google.com/admob/answer/9012903</a></li>
             </ul>
 
-            <h3>3.2 Internet Permission</h3>
+            <p><strong>Note:</strong> Premium users who purchase ad-free experience will not be subject to AdMob data collection.</p>
+
+            <h3>2.2 Google Play Billing</h3>
+            <p>When you make in-app purchases, the transaction is processed through Google Play's billing system. Google Play collects and processes payment information according to their privacy policy. We do not have access to your payment details.</p>
+            
+            <p><strong>Available In-App Purchases:</strong></p>
             <ul>
-                <li><strong>Purpose:</strong> Required for:
+                <li><strong>Premium Ad-Free ($3.99 CAD):</strong> Removes ads, unlocks unlimited folders, full color palette (24 colors), archive access, and backup/restore features</li>
+                <li><strong>Speech-to-Text ($2.99 CAD):</strong> Unlock offline voice typing with support for 11 languages</li>
+                <li><strong>Photo-to-Text ($2.99 CAD):</strong> Unlock OCR functionality to extract text from photos</li>
+            </ul>
+
+            <h3>2.3 Google ML Kit (Photo-to-Text Feature)</h3>
+            <p>If you purchase and use the Photo-to-Text feature:</p>
+            <ul>
+                <li>Text recognition is performed <strong>entirely on your device</strong> using Google ML Kit</li>
+                <li>The ML Kit model (~10MB) is automatically downloaded to your device on first use</li>
+                <li>Photos are processed locally and are <strong>never uploaded</strong> to Google servers or our servers</li>
+                <li>No images are stored by the app or transmitted anywhere</li>
+                <li>The feature works offline after the initial model download</li>
+            </ul>
+            
+            <p>Learn more about ML Kit: <a href="https://developers.google.com/ml-kit" target="_blank">https://developers.google.com/ml-kit</a></p>
+
+            <h3>2.4 Vosk Speech Recognition (Speech-to-Text Feature)</h3>
+            <p>If you purchase and use the Speech-to-Text feature:</p>
+            <ul>
+                <li>Speech recognition is performed <strong>entirely offline</strong> on your device</li>
+                <li>Language models are hosted on our GitHub repository: <a href="https://github.com/SymptomTech" target="_blank">github.com/SymptomTech</a></li>
+                <li>You download only the language models you choose (each model is 30-50MB)</li>
+                <li>Models are stored in the app's private directory on your device</li>
+                <li>Audio is processed in real-time and <strong>immediately discarded</strong> after transcription</li>
+                <li>No audio recordings are saved, transmitted, or uploaded anywhere</li>
+                <li>The feature works completely offline</li>
+            </ul>
+            
+            <p><strong>Supported Languages:</strong> English (US), Spanish, French, German, Portuguese, Italian, Russian, Japanese, Chinese, Hindi, and Indian English</p>
+        </div>
+
+        <h2>3. Permissions</h2>
+        
+        <div class="section">
+            <h3>3.1 Microphone Permission (Optional)</h3>
+            <p><strong>Required for:</strong> Speech-to-Text feature only (if purchased)</p>
+            <p><strong>Purpose:</strong> To capture your voice for transcription into text</p>
+            <p><strong>Privacy:</strong></p>
+            <ul>
+                <li>Audio is processed entirely on your device</li>
+                <li>Audio is not recorded, saved, or transmitted</li>
+                <li>Audio is immediately discarded after transcription</li>
+                <li>You can revoke this permission at any time in Android Settings</li>
+            </ul>
+            <p><strong>Note:</strong> The app will continue to function without this permission (Speech-to-Text feature will be unavailable)</p>
+
+            <h3>3.2 Camera Permission (Optional)</h3>
+            <p><strong>Required for:</strong> Photo-to-Text feature only (if purchased)</p>
+            <p><strong>Purpose:</strong> To capture photos for text extraction or select existing photos from your gallery</p>
+            <p><strong>Privacy:</strong></p>
+            <ul>
+                <li>Images are processed entirely on your device</li>
+                <li>Images are not saved, stored, or transmitted</li>
+                <li>Only extracted text is inserted into your note</li>
+                <li>You can revoke this permission at any time in Android Settings</li>
+            </ul>
+            <p><strong>Note:</strong> The app will continue to function without this permission (Photo-to-Text feature will be unavailable)</p>
+
+            <h3>3.3 Storage Permission (Optional)</h3>
+            <p><strong>Required for:</strong> Backup export and import features (Premium only)</p>
+            <p><strong>Purpose:</strong> To save backup files to your device's storage and read backup files for restoration</p>
+            <p><strong>What We Access:</strong></p>
+            <ul>
+                <li>Only the backup files you explicitly choose to export/import</li>
+                <li>Backup files are standard ZIP files containing your notes and folders in JSON format</li>
+                <li>We do not access any other files on your device</li>
+            </ul>
+        </div>
+
+        <h2>4. How We Use Information</h2>
+        
+        <div class="section">
+            <p>Since we do not collect or have access to your notes, content, or personal information, we cannot use it. The only data processing that occurs is:</p>
+            
+            <h3>4.1 On-Device Processing Only</h3>
+            <ul>
+                <li><strong>Note Storage:</strong> Your notes are stored in the app's local database (Room/SQLite) on your device</li>
+                <li><strong>Speech-to-Text:</strong> Audio is processed by Vosk models running entirely on your device</li>
+                <li><strong>Photo-to-Text:</strong> Images are processed by ML Kit models running entirely on your device</li>
+                <li><strong>Backup/Restore:</strong> Data is exported/imported directly to/from your device's storage as ZIP files</li>
+            </ul>
+
+            <h3>4.2 What We Do NOT Do</h3>
+            <ul>
+                <li>We do not analyze your notes or content</li>
+                <li>We do not share your data with third parties (except AdMob for free users, as disclosed)</li>
+                <li>We do not use your data for marketing or advertising (beyond AdMob's own operations)</li>
+                <li>We do not sell your data to anyone</li>
+                <li>We do not create user profiles</li>
+            </ul>
+        </div>
+
+        <h2>5. Data Security</h2>
+        
+        <div class="section">
+            <h3>5.1 On-Device Security</h3>
+            <ul>
+                <li>All app data is protected by Android's built-in security features</li>
+                <li>Data is stored in the app's private directory, inaccessible to other apps</li>
+                <li>No user authentication required (no passwords to compromise)</li>
+                <li>Backup files are standard ZIP files that you control</li>
+            </ul>
+
+            <h3>5.2 Network Security</h3>
+            <ul>
+                <li>No note content is ever transmitted over the network</li>
+                <li>The only network connections are:
                     <ul>
-                        <li>Displaying advertisements (in free version)</li>
-                        <li>Processing in-app purchases (Google Play Billing)</li>
-                        <li>Downloading speech-to-text language packs (one-time per language)</li>
+                        <li>AdMob ad delivery (free version only)</li>
+                        <li>Google Play Billing for purchases</li>
+                        <li>ML Kit model download (one-time, ~10MB, Photo-to-Text feature)</li>
+                        <li>Vosk model downloads from GitHub (optional, for languages you choose)</li>
                     </ul>
                 </li>
-                <li><strong>Not Used For:</strong> Uploading your notes, voice data, or personal information</li>
+                <li>All network connections use secure HTTPS protocols</li>
             </ul>
 
-            <h3>3.3 Storage Permission</h3>
+            <h3>5.3 Backup Security</h3>
             <ul>
-                <li><strong>Purpose:</strong> To create and restore backup files</li>
-                <li><strong>User Control:</strong> You choose when to create backups and where to save them</li>
-            </ul>
-        </div>
-
-        <h2>4. Third-Party Services</h2>
-        
-        <div class="section">
-            <p>NotePad integrates with the following third-party services:</p>
-
-            <h3>4.1 Google Play Services</h3>
-            <ul>
-                <li><strong>Purpose:</strong> In-app purchase processing</li>
-                <li><strong>Information Shared:</strong> Purchase transaction data (handled by Google)</li>
-                <li><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-            </ul>
-
-            <h3>4.2 Google AdMob</h3>
-            <ul>
-                <li><strong>Purpose:</strong> Displaying advertisements (only in free version)</li>
-                <li><strong>Information Shared:</strong> Anonymous advertising identifiers for ad targeting</li>
-                <li><strong>Opt-Out:</strong> Purchase the "Remove Ads" feature to stop all advertising</li>
-                <li><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google AdMob Privacy Policy</a></li>
-            </ul>
-
-            <h3>4.3 Vosk Speech Recognition</h3>
-            <ul>
-                <li><strong>Purpose:</strong> Offline speech-to-text processing</li>
-                <li><strong>Information Shared:</strong> None - Vosk runs entirely on your device</li>
-                <li><strong>Privacy:</strong> No cloud processing, no data transmission</li>
-                <li><strong>Open Source:</strong> <a href="https://alphacephei.com/vosk/" target="_blank">Vosk Project</a></li>
-            </ul>
-        </div>
-
-        <h2>5. Data Storage and Security</h2>
-        
-        <div class="section">
-            <h3>5.1 Local Storage</h3>
-            <ul>
-                <li>All your notes are stored in a local database on your device</li>
-                <li>Data is stored in the app's private directory (inaccessible to other apps)</li>
-                <li>If you uninstall the app, all data is permanently deleted from your device</li>
-            </ul>
-
-            <h3>5.2 Backups</h3>
-            <ul>
-                <li>Backups are created only when you explicitly choose to create them</li>
-                <li>You control where backups are saved (local storage, Google Drive, Dropbox, etc.)</li>
+                <li>Backup files are created locally and stored where you choose</li>
                 <li>We do not have access to your backup files</li>
                 <li>Backup security depends on where you choose to store them</li>
-            </ul>
-
-            <h3>5.3 Security Measures</h3>
-            <ul>
-                <li>App data is protected by Android's built-in security features</li>
-                <li>In-app purchases are secured by Google Play's encryption</li>
-                <li>No user authentication required (no passwords stored)</li>
+                <li>We recommend storing backups in secure locations (password-protected cloud storage, encrypted drives, etc.)</li>
             </ul>
         </div>
 
@@ -287,8 +357,11 @@
             <p>
                 NotePad does not knowingly collect personal information from children under 13. 
                 The App is designed to work entirely offline with local storage, making it safe for all ages. 
+                Parents and guardians can confidently allow children to use the app as no personal data is collected or transmitted.
+            </p>
+            <p>
                 If you are a parent or guardian and believe your child has provided us with personal information, 
-                please contact us.
+                please contact us immediately. However, given our privacy-first design, it is highly unlikely any data has been collected.
             </p>
         </div>
 
@@ -298,92 +371,182 @@
             <h3>7.1 Data Control</h3>
             <ul>
                 <li><strong>Access:</strong> You can access all your data within the app at any time</li>
-                <li><strong>Export:</strong> Create backups to export your data</li>
-                <li><strong>Delete:</strong> Uninstalling the app permanently deletes all local data</li>
+                <li><strong>Export:</strong> Premium users can create backups to export all data as ZIP files</li>
+                <li><strong>Delete:</strong> You can delete individual notes, folders, or all data at any time</li>
+                <li><strong>Complete Removal:</strong> Uninstalling the app permanently deletes all local data from your device</li>
             </ul>
 
-            <h3>7.2 Permissions</h3>
+            <h3>7.2 Permissions Management</h3>
             <ul>
                 <li>You can revoke microphone permission at any time via Android Settings → Apps → NotePad → Permissions</li>
-                <li>The app will continue to function without microphone access (speech-to-text unavailable)</li>
+                <li>You can revoke camera permission at any time via Android Settings → Apps → NotePad → Permissions</li>
+                <li>You can revoke storage permission at any time via Android Settings → Apps → NotePad → Permissions</li>
+                <li>The app will continue to function without these permissions (respective features will be unavailable)</li>
             </ul>
 
-            <h3>7.3 Advertising</h3>
+            <h3>7.3 Advertising Controls</h3>
             <ul>
-                <li>Purchase "Remove Ads" to permanently stop all advertisements</li>
+                <li>Purchase "Premium Ad-Free" ($3.99 CAD) to permanently remove all advertisements</li>
                 <li>Adjust ad personalization in your Google account settings</li>
+                <li>Reset your advertising ID in Android Settings → Google → Ads</li>
+            </ul>
+
+            <h3>7.4 In-App Purchase Management</h3>
+            <ul>
+                <li>Purchases are one-time only (no subscriptions or recurring charges)</li>
+                <li>Purchases are tied to your Google Play account</li>
+                <li>You can view purchase history in Google Play Store → Account → Purchase history</li>
+                <li>Refund requests must be made through Google Play Store (typically within 48 hours of purchase)</li>
             </ul>
         </div>
 
-        <h2>8. Changes to This Privacy Policy</h2>
+        <h2>8. Free vs. Premium Features</h2>
+        
+        <div class="section">
+            <h3>8.1 Free Version</h3>
+            <ul>
+                <li>Unlimited notes</li>
+                <li>Maximum 3 folders</li>
+                <li>6 primary colors (Red, Orange, Yellow, Green, Blue, Purple)</li>
+                <li>Basic features (pin notes, share, checklists)</li>
+                <li>AdMob advertisements displayed</li>
+            </ul>
+
+            <h3>8.2 Premium Version ($3.99 CAD)</h3>
+            <ul>
+                <li>All free features</li>
+                <li>Ad-free experience (no AdMob)</li>
+                <li>Unlimited folders</li>
+                <li>Full color palette (24 colors)</li>
+                <li>Archive access (archive and restore notes/folders)</li>
+                <li>Backup/Restore features (export/import as ZIP files)</li>
+            </ul>
+
+            <h3>8.3 Speech-to-Text Add-On ($2.99 CAD)</h3>
+            <ul>
+                <li>Offline voice typing</li>
+                <li>11 language support</li>
+                <li>Download only languages you need</li>
+                <li>100% on-device processing</li>
+                <li>Insert transcribed text into notes or checklists</li>
+            </ul>
+
+            <h3>8.4 Photo-to-Text Add-On ($2.99 CAD)</h3>
+            <ul>
+                <li>OCR (Optical Character Recognition)</li>
+                <li>Camera or gallery photo selection</li>
+                <li>100% on-device processing</li>
+                <li>~90% accuracy for printed text</li>
+                <li>Insert extracted text into notes or checklists</li>
+            </ul>
+
+            <p><strong>Important:</strong> All purchases are separate and optional. You can use the free version indefinitely, or purchase individual features as needed.</p>
+        </div>
+
+        <h2>9. Changes to This Privacy Policy</h2>
         
         <div class="section">
             <p>
-                We may update this Privacy Policy from time to time. We will notify you of any changes by:
+                We may update this Privacy Policy from time to time to reflect changes in our practices, features, or legal requirements. We will notify you of any changes by:
             </p>
             <ul>
                 <li>Posting the new Privacy Policy on this page</li>
-                <li>Updating the "Last Updated" date at the top</li>
+                <li>Updating the "Last Updated" date at the top of this policy</li>
                 <li>Notifying you via the app (for significant changes)</li>
             </ul>
             <p>
                 You are advised to review this Privacy Policy periodically for any changes. 
-                Changes are effective when posted on this page.
+                Changes are effective when posted on this page. Continued use of the app after changes indicates your acceptance of the updated policy.
             </p>
         </div>
 
-        <h2>9. International Users</h2>
+        <h2>10. International Users</h2>
         
         <div class="section">
             <p>
-                NotePad is available worldwide. Since all data is stored locally on your device, 
-                data transfer laws do not apply. Your data never leaves your device except when:
+                NotePad is available worldwide. Since all data is stored locally on your device and processing occurs on-device, 
+                international data transfer laws do not apply. Your data never leaves your device (except for AdMob advertisements in free version).
+            </p>
+            <p>
+                <strong>GDPR Compliance (European Users):</strong> We do not collect personal data. The only third-party data processing 
+                is through Google AdMob (free version). You have the right to access, rectify, and delete your data at any time by managing 
+                your app data or uninstalling the app.
+            </p>
+            <p>
+                <strong>CCPA Compliance (California Users):</strong> We do not sell personal information. The only data shared is with Google AdMob 
+                for advertisement delivery (free version only). You can opt out of personalized ads through your Google account settings.
+            </p>
+        </div>
+
+        <h2>11. Third-Party Links</h2>
+        
+        <div class="section">
+            <p>
+                The app may contain links to third-party websites or services:
             </p>
             <ul>
-                <li>You explicitly create a backup and save it to a cloud service of your choice</li>
-                <li>Anonymous analytics are sent to Google (for crash reports and performance monitoring)</li>
-                <li>In-app purchase transactions are processed by Google Play</li>
+                <li><strong>GitHub:</strong> Language models for Speech-to-Text are hosted on our GitHub repository</li>
+                <li><strong>Google Play Store:</strong> For app updates and in-app purchases</li>
+                <li><strong>SymptomTech Website:</strong> For support and additional information</li>
+            </ul>
+            <p>
+                We are not responsible for the privacy practices of these third-party sites. 
+                We encourage you to read their privacy policies when visiting these sites.
+            </p>
+        </div>
+
+        <h2>12. Data Retention</h2>
+        
+        <div class="section">
+            <p>
+                <strong>Your Data:</strong> All notes, folders, and content are retained on your device until you choose to delete them or uninstall the app.
+            </p>
+            <p>
+                <strong>Speech Models:</strong> Downloaded language models remain on your device until you manually delete them via app settings or uninstall the app.
+            </p>
+            <p>
+                <strong>ML Kit Model:</strong> The photo-to-text model remains on your device until you uninstall the app.
+            </p>
+            <p>
+                <strong>Backup Files:</strong> Backup files you create are retained in your chosen storage location until you delete them.
+            </p>
+            <p>
+                <strong>Purchase History:</strong> Purchase records are maintained by Google Play and are subject to their retention policies.
+            </p>
+        </div>
+
+        <h2>13. Contact Us</h2>
+        <div class="contact-info">
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or the App's privacy practices, please contact us:</p>
+            <p><strong>Email:</strong> symptomtechnologies@gmail.com</p>
+            <p><strong>Developer:</strong> SymptomTech</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/SymptomTech" target="_blank">github.com/SymptomTech</a></p>
+            <p><strong>Package Name:</strong> com.symptomtech.notepad</p>
+        </div>
+
+        <h2>14. Consent</h2>
+        <p>By using NotePad, you consent to this Privacy Policy and agree to its terms. If you do not agree with this policy, please do not use the App.</p>
+
+        <div class="highlight" style="margin-top: 30px;">
+            <strong>Summary - Your Privacy Guarantee:</strong>
+            <ul style="margin-top: 10px;">
+                <li>✅ All notes and content stored locally on your device only</li>
+                <li>✅ Speech-to-text processing 100% offline and on-device</li>
+                <li>✅ Photo-to-text processing 100% offline and on-device</li>
+                <li>✅ No user accounts or registration required</li>
+                <li>✅ No analytics or usage tracking</li>
+                <li>✅ No data collection (except AdMob for free users)</li>
+                <li>✅ Audio and photos immediately discarded after processing</li>
+                <li>✅ You control all your data at all times</li>
             </ul>
         </div>
 
-        <h2>10. Data Retention</h2>
+        <hr style="margin: 40px 0; border: none; border-top: 1px solid #ddd;">
         
-        <div class="section">
-            <p>
-                <strong>Local Data:</strong> Retained on your device until you delete it or uninstall the app
-            </p>
-            <p>
-                <strong>Purchase Records:</strong> Maintained by Google Play in accordance with their policies
-            </p>
-            <p>
-                <strong>Analytics Data:</strong> Anonymous technical data may be retained by Google for up to 26 months
-            </p>
-        </div>
-
-        <h2>11. Your Consent</h2>
-        
-        <div class="section">
-            <p>
-                By using NotePad, you consent to this Privacy Policy and agree to its terms.
-            </p>
-        </div>
-
-        <div class="contact-info">
-            <h2>12. Contact Us</h2>
-            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact us:</p>
-            <p>
-                <strong>Developer:</strong> SymptomTech<br>
-                <strong>Email:</strong> <a href="mailto:symptomtechnologies@gmail.com">symptomtechnologies@gmail.com</a><br>
-                <strong>App:</strong> NotePad<br>
-            </p>
-        </div>
-
-        <hr style="margin: 40px 0; border: none; border-top: 1px solid #e0e0e0;">
-
-        <div style="text-align: center; color: #666; font-size: 0.9em;">
-            <p>© 2025 SymptomTech. All rights reserved.</p>
-            <p>This privacy policy was last updated on December 16, 2025.</p>
-        </div>
+        <p style="color: #666; font-size: 0.9em; text-align: center;">
+            This privacy policy was last updated on December 29, 2025.<br>
+            Thank you for trusting NotePad with your notes and ideas.
+        </p>
     </div>
 </body>
 </html>
